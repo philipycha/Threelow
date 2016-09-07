@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15D847E31D80859C00D6BE22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D847E21D80859C00D6BE22 /* main.m */; };
 		15D847EB1D8085F900D6BE22 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D847EA1D8085F900D6BE22 /* Dice.m */; };
+		15D847F11D80921300D6BE22 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D847F01D80921300D6BE22 /* InputCollector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		15D847E21D80859C00D6BE22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15D847E91D8085F900D6BE22 /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
 		15D847EA1D8085F900D6BE22 /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		15D847EF1D80921300D6BE22 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputCollector.h; path = ../InputCollector.h; sourceTree = "<group>"; };
+		15D847F01D80921300D6BE22 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputCollector.m; path = ../InputCollector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				15D847E21D80859C00D6BE22 /* main.m */,
 				15D847E91D8085F900D6BE22 /* Dice.h */,
 				15D847EA1D8085F900D6BE22 /* Dice.m */,
+				15D847EF1D80921300D6BE22 /* InputCollector.h */,
+				15D847F01D80921300D6BE22 /* InputCollector.m */,
 			);
 			path = Threelow;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D847F11D80921300D6BE22 /* InputCollector.m in Sources */,
 				15D847EB1D8085F900D6BE22 /* Dice.m in Sources */,
 				15D847E31D80859C00D6BE22 /* main.m in Sources */,
 			);

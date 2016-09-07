@@ -8,6 +8,7 @@
 
 #import "Dice.h"
 
+
 @implementation Dice
 
 - (instancetype)init
@@ -16,6 +17,10 @@
     if (self) {
         
         [self randomizeValue];
+        
+
+        
+       
         
     }
     return self;
@@ -26,5 +31,22 @@
     self.diceValue = arc4random_uniform(6) +1;
     
 }
+
+- (void) roll {
+        
+        [self randomizeValue];
+        
+    }
+
+- (void) printDice {
+    
+    NSLog(@"Your dice value is %d", self.diceValue);
+    
+}
+    
+    
+    
+    
+
 
 @end
