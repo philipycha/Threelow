@@ -26,6 +26,8 @@
         
         _diceArray = @[dice1, dice2, dice3, dice4, dice5];
         
+        _holdDiceSet = [NSMutableSet set];
+        
         [self randomizeValue];
 
     }
@@ -34,12 +36,18 @@
     
 }
 
-- (void) holdDice:(Dice *)dice
-{
-    
-    //how do i hold the dice??
+- (void) holdDice:(Dice *)dice{
     
     [self.holdDiceSet addObject:dice];
+    
+    [self printDice];
+    
+}
+
+-(void) unholdDice:(Dice *)dice{
+    
+    [self.holdDiceSet removeObject:dice];
+    
     [self printDice];
     
 }

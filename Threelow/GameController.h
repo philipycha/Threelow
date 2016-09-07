@@ -22,7 +22,8 @@
 -(void) randomizeValue;
 -(void) roll;
 -(void) printDice;
-- (void) holdDice:(Dice *)dice;
+-(void) holdDice:(Dice *)dice;
+-(void) unholdDice:(Dice *)dice;
 
 
 
