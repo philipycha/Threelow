@@ -28,7 +28,9 @@ int main(int argc, const char * argv[]) {
         InputCollector *inputCollector = [[InputCollector alloc] init];
         GameController *gameController = [[GameController alloc] init];
         
-        NSString *inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\nhold# - hold dice\nunhold# - unhold dice\nquit - quit game\n"];
+        
+        
+        NSString *inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\nhold# - hold dice\nunhold# - unhold dice\nreset - reset dice\nquit - quit game\n"];
         
         while (![inputSelected isEqualToString:@"quit"]) {
             
@@ -36,7 +38,7 @@ int main(int argc, const char * argv[]) {
             if ([inputSelected isEqualToString:@"roll"]) {
                 for (Dice *dice in diceArray) {
                     [dice roll];
-                    NSLog(@"%d", dice.diceValue);
+                    NSLog(@"%@", dice.symbol);
                     
                 }
                 inputSelected = @"";
@@ -125,6 +127,13 @@ int main(int argc, const char * argv[]) {
                 
                 inputSelected = @"";
                 
+            } else if ([inputSelected isEqualToString:@"reset"]) {
+                
+                [gameController resetDice];
+                
+                NSLog(@"Dice Reset");
+            
+                
                 
             } else {
                 
@@ -137,7 +146,7 @@ int main(int argc, const char * argv[]) {
                 
             }
             
-            inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\nhold - hold#\nunhold# - unhold dice\nquit - quit\n"];
+            inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\nhold# - hold dice\nunhold# - unhold dice\nreset - reset dice\nquit - quit game\n"];
             
         }
         

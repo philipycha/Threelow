@@ -15,7 +15,7 @@
 
 @property (nonatomic) NSMutableSet *holdDiceSet;
 @property (nonatomic) NSArray *diceArray;
-@property (nonatomic) Dice *dice;
+//@property (nonatomic) Dice *dice;
 @property (nonatomic) int diceValue;
 
 
@@ -24,6 +24,7 @@
 -(void) printDice;
 -(void) holdDice:(Dice *)dice;
 -(void) unholdDice:(Dice *)dice;
+-(void) resetDice;
 
 
 

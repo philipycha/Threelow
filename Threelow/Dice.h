@@ -17,6 +17,8 @@
 
 @property (nonatomic) NSMutableSet *holdDiceSet;
 
+@property (nonatomic) NSString *symbol;
+
 
 
 

@@ -28,6 +28,26 @@
     
     self.diceValue = arc4random_uniform(6) +1;
     
+    switch (self.diceValue) {
+        case 1:
+            self.symbol = @"\u2680";
+            break;
+        case 2:
+            self.symbol = @"\u2681";
+            break;
+        case 3:
+            self.symbol = @"\u2682";
+            break;
+        case 4:
+            self.symbol = @"\u2683";
+            break;
+        case 5:
+            self.symbol = @"\u2684";
+            break;
+        default:
+            self.symbol = @"\u2685";
+            break;
+    }
 }
 
 - (void) roll {

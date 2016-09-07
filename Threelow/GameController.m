@@ -22,7 +22,7 @@
         Dice *dice4 = [[Dice alloc] init];
         Dice *dice5 = [[Dice alloc] init];
         
-        _dice = dice1;
+     //   _dice = dice1;
         
         _diceArray = @[dice1, dice2, dice3, dice4, dice5];
         
@@ -71,5 +71,10 @@
     
 }
 
+- (void) resetDice {
+        
+        [self.holdDiceSet removeAllObjects];
+    
+}
 
 @end
