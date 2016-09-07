@@ -1,5 +1,5 @@
 //
-//  Dice.h
+//  GameController.h
 //  Threelow
 //
 //  Created by Philip Ha on 2016-09-07.
@@ -7,24 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Dice.h"
 #import "InputCollector.h"
 
-@interface Dice : NSObject
 
-@property (nonatomic) int diceValue;
-
-@property (nonatomic) NSArray *diceArray;
+@interface GameController : NSObject
 
 @property (nonatomic) NSMutableSet *holdDiceSet;
-
-
-
+@property (nonatomic) NSArray *diceArray;
+@property (nonatomic) Dice *dice;
+@property (nonatomic) int diceValue;
 
 
 -(void) randomizeValue;
 -(void) roll;
 -(void) printDice;
--(void) holdDice;
+- (void) holdDice:(Dice *)dice;
 
 
 

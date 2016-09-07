@@ -18,8 +18,6 @@
         
         [self randomizeValue];
         
-
-        
        
         
     }
@@ -43,6 +41,10 @@
     NSLog(@"Your dice value is %d", self.diceValue);
     
 }
+
+
+
+
     
     
     

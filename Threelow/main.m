@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Dice.h"
 #import "InputCollector.h"
+#import "GameController.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -23,20 +24,90 @@ int main(int argc, const char * argv[]) {
         
         diceArray = @[dice1, dice2, dice3, dice4, dice5];
         
+        
         InputCollector *inputCollector = [[InputCollector alloc] init];
+        GameController *gameController = [[GameController alloc] init];
         
-        NSString *inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\n"];
+        NSString *inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\nhold# - hold dice\nquit - quit\n"];
         
-        while ([inputSelected isEqualToString:@"roll"]) {
-            for (Dice *dice in diceArray) {
-                NSLog(@"%d", dice.diceValue);
+        while (![inputSelected isEqualToString:@"quit"]) {
+            
+            
+            
+            
+            
+            if ([inputSelected isEqualToString:@"roll"]) {
+                for (Dice *dice in diceArray) {
+                    NSLog(@"%d", dice.diceValue);
+                    
+                    
+                }
+                inputSelected = @"";
+                
             }
-           
-            break;
+            else if ([inputSelected isEqualToString:@"hold1"]) {
+                
+                [gameController holdDice:gameController.diceArray[0]];
+                
+                NSLog(@"held dice 1");
+                
+                inputSelected = @"";
+                
+            } else if ([inputSelected isEqualToString:@"hold2"]) {
+                
+                
+                [gameController holdDice:gameController.diceArray[1]];
+                
+                NSLog(@"held dice 2");
+                
+                inputSelected = @"";
+                
+                
+            } else if ([inputSelected isEqualToString:@"hold3"]) {
+                
+                [gameController holdDice:gameController.diceArray[2]];
+                
+                NSLog(@"held dice 3");
+                
+                inputSelected = @"";
+                
+            } else if ([inputSelected isEqualToString:@"hold4"]) {
+
+                [gameController holdDice:gameController.diceArray[3]];
+                
+                NSLog(@"held dice 4");
+                
+                inputSelected = @"";
+                
+                
+            } else if ([inputSelected isEqualToString:@"hold5"]) {
+
+                [gameController holdDice:gameController.diceArray[4]];
+                
+                NSLog(@"held dice 5");
+                
+                inputSelected = @"";
+                
+                
+            } else {
+                
+                [inputSelected isEqualToString:@"quit"];
+                
+                NSLog(@"You have quit. Goodbye!");
+                
+                inputSelected = @"quit";
+                
+                
+            }
+            
+            inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\nhold - hold#\nquit - quit\n"];
             
         }
         
         
+        
+        
+        return 0;
+        
     }
-    return 0;
 }
