@@ -21,9 +21,7 @@
         Dice *dice3 = [[Dice alloc] init];
         Dice *dice4 = [[Dice alloc] init];
         Dice *dice5 = [[Dice alloc] init];
-        
-     //   _dice = dice1;
-        
+          
         _diceArray = @[dice1, dice2, dice3, dice4, dice5];
         
         _holdDiceSet = [NSMutableSet set];
@@ -40,7 +38,7 @@
     
     [self.holdDiceSet addObject:dice];
     
-    [self printDice];
+    [self printDiceAndScore];
     
 }
 
@@ -48,7 +46,7 @@
     
     [self.holdDiceSet removeObject:dice];
     
-    [self printDice];
+    [self printDiceAndScore];
     
 }
 
@@ -58,9 +56,17 @@
     
 }
 
-- (void) printDice {
+- (void) printDiceAndScore {
+    int score = 0;
     
-    NSLog(@"Your dice value is %d", self.diceValue);
+    for (Dice *dice in _holdDiceSet) {
+        
+        score += dice.diceValue;
+        
+    }
+    
+    NSLog(@"Your dice Score is %i", score);
+    
     
 }
 

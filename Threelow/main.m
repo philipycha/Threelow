@@ -11,24 +11,14 @@
 #import "InputCollector.h"
 #import "GameController.h"
 
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-        NSArray *diceArray = [[NSArray alloc] init];
-        
-        Dice *dice1 = [[Dice alloc] init];
-        Dice *dice2 = [[Dice alloc] init];
-        Dice *dice3 = [[Dice alloc] init];
-        Dice *dice4 = [[Dice alloc] init];
-        Dice *dice5 = [[Dice alloc] init];
-        
-        diceArray = @[dice1, dice2, dice3, dice4, dice5];
-        
         
         InputCollector *inputCollector = [[InputCollector alloc] init];
         GameController *gameController = [[GameController alloc] init];
         
-        
+        [gameController printDiceAndScore];
         
         NSString *inputSelected = [inputCollector inputForPrompt:@"\nroll - roll dice\nhold# - hold dice\nunhold# - unhold dice\nreset - reset dice\nquit - quit game\n"];
         
@@ -36,11 +26,12 @@ int main(int argc, const char * argv[]) {
             
             
             if ([inputSelected isEqualToString:@"roll"]) {
-                for (Dice *dice in diceArray) {
+                for (Dice *dice in gameController.diceArray) {
                     [dice roll];
                     NSLog(@"%@", dice.symbol);
                     
                 }
+                
                 inputSelected = @"";
                 
             }

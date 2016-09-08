@@ -18,8 +18,7 @@
         
         [self randomizeValue];
         
-       
-        
+
     }
     return self;
 }

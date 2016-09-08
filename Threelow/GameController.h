@@ -15,13 +15,13 @@
 
 @property (nonatomic) NSMutableSet *holdDiceSet;
 @property (nonatomic) NSArray *diceArray;
-//@property (nonatomic) Dice *dice;
 @property (nonatomic) int diceValue;
+@property (nonatomic) int diceScore;
 
 
 -(void) randomizeValue;
 -(void) roll;
--(void) printDice;
+-(void) printDiceAndScore;
 -(void) holdDice:(Dice *)dice;
 -(void) unholdDice:(Dice *)dice;
 -(void) resetDice;
